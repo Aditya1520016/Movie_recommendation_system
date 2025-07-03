@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔎 Recommendations for: {{ input_title }}</h1>
+    {% if movies %}
+      <ul>
+        {% for movie in movies %}
+          <li>
+            <h2>{{ movie['Title'] }}</h2>
+
+            <p><strong>Genre:</strong> {{ movie['Genre'] }}</p>
+            <p><strong>Rating:</strong> {{ movie['Rating'] }}</p>
+            <p>{{ movie['Description'] }}</p>
+
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No recommendations found. Try another movie or adjust filters.</p>
+    {% endif %}
+    <a href="/">🔁 Try Another</a>
+  </div>
+</body>
+</html>

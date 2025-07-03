@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Movie Recommendation System</h1>
+    <form action="/recommend" method="POST">
+      <input type="text" name="title" placeholder="Enter a movie title" required>
+      <select name="genre">
+        <option value="">Any Genre</option>
+        <option>Action</option>
+        <option>Comedy</option>
+        <option>Drama</option>
+        <option>Romance</option>
+        <option>Sci-Fi</option>
+      </select>
+      <input type="number" name="rating" step="0.1" min="0" max="10" placeholder="Minimum IMDb Rating">
+      <button type="submit">🔍 Recommend</button>
+    </form>
+  </div>
+</body>
+</html>
